@@ -17,6 +17,6 @@ RUN ln -s /usr/local/lexmark/unix_scan_drivers/lib/sane/libsane-lexmark_nscan.so
 RUN echo lexmark_nscan > /etc/sane.d/dll.conf
 RUN sed -i 's/^DISCOVER_NET_FLAG=.*/DISCOVER_NET_FLAG=0/;s/^SHOW_PSEUDO_NETWORK_FLAG=.*/SHOW_PSEUDO_NETWORK_FLAG=0/' /etc/sane.d/lexmark_nscan.conf
 
-COPY cups_sane.sh /usr/local/bin/cups_sane.shSHOW_PSEUDO_NETWORK_FLAG=
+COPY cups_sane.sh /usr/local/bin/cups_sane.sh
 ENTRYPOINT ["cups_sane.sh"]
 CMD []
