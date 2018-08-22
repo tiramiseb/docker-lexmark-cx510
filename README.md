@@ -1,4 +1,4 @@
-# Lexmark CX510 docker image
+# Lexmark CX510 CUPS+SANE docker image
 
 ## Other printers?
 
