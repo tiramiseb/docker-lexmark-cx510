@@ -28,5 +28,9 @@ then
 fi
 
 
-# And finally, start SANE
-/usr/sbin/saned -d 2
+# And finally, start SANE in a loop (so that the container doesn't stop if saned dies)
+while true
+do
+    /usr/sbin/saned -d 2
+    sleep 2
+done
